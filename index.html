@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wireframe — Rondônia Refrigeração</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Archivo+Expanded:wght@700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --azul-noite: #0e2b3a;
+    --azul-petroleo: #163d52;
+    --gelo: #eef4f4;
+    --gelo-2: #dfe9e9;
+    --cobre: #c8683a;
+    --cobre-escuro: #a34f28;
+    --prata: #8fa3ab;
+    --font-display: "Archivo Expanded", "Archivo", sans-serif;
+    --font-body: "Archivo", sans-serif;
+    --font-serif: "Source Serif 4", serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: var(--font-body);
+    background: var(--gelo);
+    color: var(--azul-noite);
+  }
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+  .block {
+    border: 2px dashed var(--prata);
+    background: #fff;
+    margin: 16px auto;
+    padding: 20px;
+    border-radius: 4px;
+  }
+  .block .label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--cobre-escuro);
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    font-family: var(--font-display);
+  }
+
+  header.block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    background: var(--azul-noite);
+    border: 2px dashed var(--prata);
+    color: #f4f8f8;
+  }
+  header.block .logo-box {
+    border: 1px dashed rgba(255,255,255,0.4);
+    padding: 8px 14px;
+    font-weight: 800;
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.01em;
+  }
+  header.block nav {
+    display: flex;
+    gap: 16px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  header.block nav a { color: #cfe0e0; text-decoration: none; border-bottom: 1px dashed rgba(255,255,255,0.35); }
+  header.block .btn { border: 1px dashed var(--cobre); color: var(--cobre); padding: 8px 14px; font-size: 13px; font-weight: 700; background: rgba(200,104,58,0.08); }
+
+  .hero.block {
+    text-align: center;
+    padding: 60px 20px;
+    background: var(--gelo);
+  }
+  .hero.block h1 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 28px;
+    margin: 0 0 12px;
+    border: 1px dashed var(--prata);
+    padding: 14px;
+    display: inline-block;
+    color: var(--azul-noite);
+  }
+  .hero.block p {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    color: var(--azul-petroleo);
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 14px;
+    border: 1px dashed var(--gelo-2);
+    padding: 10px;
+    background: #fff;
+  }
+  .hero.block .btn-row { display: flex; gap: 10px; justify-content: center; }
+  .btn { border: 1px dashed var(--cobre); color: var(--cobre-escuro); padding: 10px 18px; font-size: 13px; font-weight: 700; background: rgba(200,104,58,0.06); border-radius: 3px; }
+
+  .grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+  .grid2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .box {
+    border: 1px dashed var(--gelo-2);
+    background: var(--gelo);
+    padding: 16px;
+    font-size: 13px;
+    color: var(--azul-petroleo);
+    min-height: 90px;
+    border-radius: 3px;
+  }
+  .box strong { display: block; color: var(--azul-noite); margin-bottom: 6px; font-size: 14px; font-family: var(--font-display); font-weight: 700; }
+
+  .placeholder-img {
+    border: 1px dashed var(--prata);
+    background: repeating-linear-gradient(45deg, var(--gelo), var(--gelo) 10px, var(--gelo-2) 10px, var(--gelo-2) 20px);
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--azul-petroleo);
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 3px;
+  }
+
+  footer.block {
+    text-align: center;
+    font-size: 12px;
+    color: #cfe0e0;
+    background: var(--azul-noite);
+  }
+
+  .note-strip {
+    background: #fff;
+    border: 1px solid var(--gelo-2);
+    border-left: 4px solid var(--cobre);
+    padding: 14px 20px;
+    font-size: 13px;
+    color: var(--azul-petroleo);
+    max-width: 900px;
+    margin: 24px auto;
+    border-radius: 0 4px 4px 0;
+  }
+  .top-note {
+    background: var(--azul-noite);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--cobre);
+  }
+</style>
+</head>
+<body>
+
+<div class="top-note">WIREFRAME — apenas estrutura e conteúdo. Sem cor, fonte ou estilo final.</div>
+
+<div class="wrap">
+
+  <header class="block">
+    <div class="label" style="position:absolute; margin-top:-30px;">cabeçalho</div>
+    <div class="logo-box">RONDÔNIA REFRIGERAÇÃO</div>
+    <nav>
+      <a href="#">Serviços</a>
+      <a href="#">Produtos</a>
+      <a href="#">Sobre</a>
+      <a href="#">Contato</a>
+    </nav>
+    <div class="btn">WhatsApp</div>
+  </header>
+
+  <section class="hero block">
+    <div class="label">seção principal (topo da página)</div>
+    <h1>[título principal — o que a loja resolve]</h1>
+    <p>[frase curta explicando o serviço: refrigeração, peças, instalação — o que for mais forte]</p>
+    <div class="btn-row">
+      <div class="btn">Falar no WhatsApp</div>
+      <div class="btn">Ligar agora</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="label">o que a loja oferece (2 ou 3 opções)</div>
+    <div class="grid2">
+      <div class="box">
+        <strong>[Preciso de uma peça]</strong>
+        Texto curto explicando o que tem no estoque. Botão levando pro WhatsApp.
+      </div>
+      <div class="box">
+        <strong>[Preciso de serviço técnico]</strong>
+        Texto curto sobre instalação/manutenção. Botão levando pro WhatsApp.
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="label">lista de produtos / serviços do balcão</div>
+    <div class="grid3">
+      <div class="box"><strong>[Item 1]</strong>descrição curta</div>
+      <div class="box"><strong>[Item 2]</strong>descrição curta</div>
+      <div class="box"><strong>[Item 3]</strong>descrição curta</div>
+      <div class="box"><strong>[Item 4]</strong>descrição curta</div>
+      <div class="box"><strong>[Item 5]</strong>descrição curta</div>
+      <div class="box"><strong>[Item 6]</strong>descrição curta</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="label">marcas que a loja trabalha</div>
+    <div class="placeholder-img">[ logos das marcas em linha ]</div>
+  </section>
+
+  <section class="block">
+    <div class="label">por que escolher a loja / diferenciais</div>
+    <div class="grid2">
+      <div class="box"><strong>[Diferencial 1]</strong>ex: anos de tradição</div>
+      <div class="box"><strong>[Diferencial 2]</strong>ex: estoque amplo</div>
+      <div class="box"><strong>[Diferencial 3]</strong>ex: atendimento direto</div>
+      <div class="box"><strong>[Diferencial 4]</strong>ex: horário estendido</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="label">avaliações de clientes (opcional)</div>
+    <div class="grid3">
+      <div class="box">"[depoimento curto]"<br>— nome do cliente</div>
+      <div class="box">"[depoimento curto]"<br>— nome do cliente</div>
+      <div class="box">"[depoimento curto]"<br>— nome do cliente</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="label">contato e localização</div>
+    <div class="grid2">
+      <div class="box">
+        <strong>Informações</strong>
+        Endereço<br>Telefone<br>WhatsApp<br>Horário de funcionamento
+      </div>
+      <div class="placeholder-img">[ mapa ]</div>
+    </div>
+  </section>
+
+  <footer class="block">
+    <div class="label">rodapé</div>
+    Nome da loja — endereço — telefone
+  </footer>
+
+  <div class="note-strip">
+    <strong>Isto é só a estrutura.</strong> Nenhum texto, cor ou imagem aqui é final — servem só pra decidir juntos o que entra em cada parte da página antes de desenhar o visual de verdade.
+  </div>
+
+</div>
+
+</body>
+</html>
