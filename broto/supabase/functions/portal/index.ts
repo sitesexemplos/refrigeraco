@@ -1,0 +1,2 @@
+import {endpoint,authenticate,stripe,site,json,PublicError} from '../_shared/core.ts';
+endpoint(async req=>{const {db,user}=await authenticate(req);const {data,error}=await db.from('subscriptions').select('stripe_customer_id').eq('user_id',user.id).maybeSingle();if(error)throw error;if(!data?.stripe_customer_id)throw new PublicError('Você ainda não iniciou uma assinatura. Escolha Assinar com a Stripe.');const session=await stripe().billingPortal.sessions.create({customer:data.stripe_customer_id,return_url:site()+'/#jardim'});return json(req,{url:session.url});});
